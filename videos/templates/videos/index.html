@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video App</title>
+</head>
+<body>
+    <h1>Video App</h1>
+    <ul>
+    {% for video in videos %}
+        <li>
+            <a href="{% url 'video_list' video.id %}">{{video.title}} </a>
+        </li>
+
+    {% endfor %}
+    </ul>
+    <a href="{% url 'add_video' %}">Add Video</a>
+</body>
+</html>
